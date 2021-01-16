@@ -32,9 +32,9 @@ help_theta1(:, 1) = 0;
 help_theta2 = Theta2;
 help_theta2(:, 1) = 0;
 
-reg_term = (lambda / (2*m)) * (sum(sum(help_theta1 .^ 2)) + sum(sum(help_theta2 .^ 2)));
+reg_term = (lambda / (2*m)) * (sum(help_theta1 .^ 2) + sum(help_theta2 .^ 2));
 
-J = (-1/m) * sum(sum(y .* log_h_theta + (1 - y) .* one_minus_log_h_theta)) + reg_term;
+J = (-1/m) * sum(y .* log_h_theta + (1 - y) .* one_minus_log_h_theta) + reg_term;
 
 
 
