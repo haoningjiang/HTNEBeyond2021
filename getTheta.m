@@ -5,6 +5,7 @@ function [Theta1, Theta2] = getTheta(X, y, lambda)
 %parameters obtained by training the neural network using the training
 %data. 
 
+
 %shorthand for neuralcostfunc, that only takes in the nn param as input
 costFunction = @(p) neuralCostFunc(p, X, y, lambda);
 
