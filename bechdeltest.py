@@ -1,5 +1,12 @@
 
 
+
+def sigmoid(z){
+    return 1.0 / (1 + (exp(-1 * z))
+
+    }
+
+
 #returns 0 if does not pass, 1 if pass, -1 if issue with inputs
 
 def pass_calc(malechar, femalechar, year, gross){
@@ -20,8 +27,9 @@ def pass_calc(malechar, femalechar, year, gross){
     ratio = 10.0 * f/(m+f)
     
 
-    p = 0.3228 - 0.2144*m + 1.3241 * f + 0.1337 * yr + 0.0026*grs + (0.5984*m*m/100.0) - (1.5182*f*f/10.0) + (0.0628*f*f*f/10) - 0.2843*yr*yr*yr + (0.2698*ratio*ratio*ratio/100.0)
+    z = 0.3228 - 0.2144*m + 1.3241 * f + 0.1337 * yr + 0.0026*grs + (0.5984*m*m/100.0) - (1.5182*f*f/10.0) + (0.0628*f*f*f/10) - 0.2843*yr*yr*yr + (0.2698*ratio*ratio*ratio/100.0)
 
+    p = sigmoid(z)
     
     if p >= 0.6:
         return 1
