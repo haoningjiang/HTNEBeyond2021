@@ -1,4 +1,7 @@
 function J = lrCost(theta, X, y)
+%basically the same as the one in the other cost function but without regularization and without grad
+%used to pick best model 
+
 m = length(y); % number of training examples
 X = [ones(m, 1) X];
 
