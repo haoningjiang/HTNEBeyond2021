@@ -39,7 +39,7 @@ J = (-1/m) * sum(sum(y .* log_h_theta + (1 - y) .* one_minus_log_h_theta)) + reg
 %size(J)
  
 %gradient
- 
+%Unfortunately this bit does not work 
 for t = 1:m
     %1: forward propagate 
     a_1 = X(t, :);
