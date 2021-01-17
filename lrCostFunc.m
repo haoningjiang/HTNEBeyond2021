@@ -1,6 +1,6 @@
 function [J, grad] = lrCostFunc(theta, X, y, lambda)
 
-m = length(y); % number of training examples
+m = size(X, 1); % number of training examples
 X = [ones(m, 1) X];
 
 J = 0;

@@ -21,7 +21,7 @@ init_theta = [init_Theta1(:) ; init_Theta2(:)];
 %options = optimoptions(@fminunc,'Algorithm','trust-region','SpecifyObjectiveGradient',true);
 
 options = optimoptions(@fminunc, 'Display', 'iter', 'Algorithm', 'trust-region', ...
-    'SpecifyObjectiveGradient', true, 'StepTolerance', 1e-8);
+    'SpecifyObjectiveGradient', true, 'StepTolerance', 1e-8, 'CheckGradients', true);
 [theta grad] = fminunc(costFunction, init_theta, options);
 
 Theta1 = reshape(theta(1:layer_size * (layer_size + 1)), layer_size, layer_size + 1);

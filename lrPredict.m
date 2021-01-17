@@ -1,4 +1,4 @@
-function p = lrPredict(theta, X)
+function p = lrPredict(theta, X, threshold)
 
 m = size(X, 1); % Number of training examples
 X = [ones(m, 1) X];
@@ -15,7 +15,7 @@ X = [ones(m, 1) X];
 %end
 
 p = sigmoid(X * theta);
-p(p >= 0.5) = 1;
-p(p < 0.5) = 0;
+p(p >= threshold) = 1;
+p(p < threshold) = 0;
 
 end
