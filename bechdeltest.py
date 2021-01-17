@@ -1,7 +1,8 @@
 
-
+import math
+#Created by Haoning Jiang
 def sigmoid(z):
-    return 1.0 / (1 + (exp(-1 * z)))
+    return 1.0 / (1 + (math.exp(-1 * z)))
 
 #returns 0 if does not pass, 1 if pass, -1 if issue with inputs
 

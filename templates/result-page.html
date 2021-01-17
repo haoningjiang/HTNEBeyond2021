@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Created by Melinda Tran and Linda Fan -->
 <html>
 
     <head>
@@ -7,7 +8,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Raleway&display=swap" rel="stylesheet">
       
         <style>
-        
+
+            h2{
+                
+                color: white; 
+                text-align: center; 
+                padding-bottom: 30px; 
+                padding-top: 0px; 
+                font-family: Raleway,sans-serif;
+                font-size: 30px;
+                
+            }
             footer{                
                 position: inherit;
                 bottom: 0;
@@ -30,7 +41,6 @@
             body {
                 background-image: linear-gradient( #fc93c4, #e57679, orange);
                 background-size: cover;
-               
                 margin: 0 0 0 0;
                 padding: 0;
             }
@@ -87,11 +97,23 @@
             }
             .button1 
             {   
-                width: 75%;
-                background-color:#ff84a3ea; /*change the fucking color */ 
+                background:#fc93c4;
                 color: white; /*text color */ 
-                /*border: 2px solid #4CAF50;*/
+                border: none;
+                font-family: 'Raleway', sans-serif;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 20px;
+                width: 200px;
+                height: auto;
+                
+                
             }
+
 
             .button1:hover 
             {  
@@ -112,6 +134,8 @@
                 font-size: 20px;
                 font-family: 'Berkshire Swash', cursive;
             }
+
+      
 
 
             div.settings {
@@ -147,26 +171,71 @@
         <h1>Bechdel-Wallace Bot</h1>
     </div>
 
+    <div id = "left-image">
+        <img src = "static/left-image.png" alt = "Background Information" style="margin: 0 0 0 0; padding: 0 0 0 0; vertical-align:top; position: absolute; width : 30%; height: auto; left: 2%">
+    </div>
+
+    <div id = "right-image">
+        <img src = "static/right-image.png" alt = "Other Tests" style="margin: 0 0 0 0; padding: 0 0 0 0; vertical-align:top; position: absolute; width : 30%; height: auto; right: 2%">
+    </div>
+
 
     <body>
         <div id = "bechdel-comic">
         <img src = https://upload.wikimedia.org/wikipedia/en/b/bf/Dykes_to_Watch_Out_For_%28Bechdel_test_origin%29.jpg alt = "The Comic Where the Bechdel Test Originates" class = "center">
         </div>
-
-        <div class= "body_text" style = "color: white; text-align: center;font_family: Raleway,sans-serif; padding-bottom: 15px; padding-top: 0px">
-            Alison Bechdel's <i>Dykes to Watch Out For </i> Comic Strip "The Rule" (1985)
+        <div class= "body_text" style = "color: white; text-align: center; padding-bottom: 15px; padding-top: 0px; font-family: Raleway,sans-serif;">
+            Alison Bechdel's <i>Dykes to Watch Out For </i> <br> Comic Strip "The Rule" (1985)
+            <br>   
         </div>
+       
 
-        <div id= "results">
-        Based on your data,{{title}} {{rating}} the Bechdel-Wallace Test. 
-        </div>
+        <h2>
+
+        Based on your data, {{title}} {{rating}} the Bechdel-Wallace Test.   
+
+ 
+        
+        </h2>
+
+        <a href="javascript:history.back()"class="button1">
+            
+            Try Another
+        
+        </a>
+
+           
+        
+
+        <form id="form" method="post" style="opacity: 0">
+            <div id= "formdiv" class="settings">
+                <label for="title">Title</label><br>
+                <input type="text" id="title" name="title"  style="width: 200px;">
+                <label for="male"># of Male Characters</label><br>
+                <input type="text" id="male" name="male" style="width: 200px;"><br>
+                <label for="female"># of Female Characters</label><br>
+                <input type="text" id="female" name="female" style="width: 200px;">
+                <label for="year">Release Year</label><br>
+                <input type="text" id="year" name="year" style="width: 200px;"> 
+                <label for="gross">Domestic Inflation-Adjusted Gross (K)</label><br>
+                <input type="text" id="gross" name="gross" style="width: 200px;">
+                
+                <input type = "submit" value = "Submit">
+            
+            </div>
+            
+              
+        </form>
+
 
 
             
         <div class = "body_text" style = "margin: auto; width: 50%">
-            <a href="https://en.wikipedia.org/wiki/Bechdel_test" style="color: white; text-align:center;display:block; padding-top:15px"> Bechdel-Wallace Test</a>
+            <a href="https://en.wikipedia.org/wiki/Bechdel_test" style="color: white; text-align:center;display:block; padding-top:20px; padding-bottom: 10px; font-family: Raleway,sans-serif;"> Bechdel-Wallace Test Wikipedia Page</a>
         </div>
       
     </body>
 </html>
 
+
+    

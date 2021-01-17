@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import bechdeltest
 
-
+#Created by Melinda Tran and Linda Fan
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
@@ -14,6 +14,10 @@ def post():
     DATA = request.form
     #print("data is: " + DATA) #data is: recived: ImmutableMultiDict([('title', 'Shrek'), ('male', '3'), ('female', '1'), ('year', '2005'), ('gross', '420')])
     rating = bechdeltest.pass_calc(int(DATA['male']), int(DATA['female']), int(DATA['year']), int(DATA['gross']))
+    if(rating == 1):
+        rating = "passes"
+    else:
+        rating = "fails"
     return render_template('result-page.html', rating = rating, title = DATA['title'])
     
 # @app.route("/", methods=["GET", "POST"])
