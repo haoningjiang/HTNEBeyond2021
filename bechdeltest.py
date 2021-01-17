@@ -1,26 +1,22 @@
 
 
-
-def sigmoid(z){
-    return 1.0 / (1 + (exp(-1 * z))
-
-    }
-
+def sigmoid(z):
+    return 1.0 / (1 + (exp(-1 * z)))
 
 #returns 0 if does not pass, 1 if pass, -1 if issue with inputs
 
-def pass_calc(malechar, femalechar, year, gross){
+def pass_calc(malechar, femalechar, year, gross):
     m = malechar
     f = femalechar
 
-    if f == 0:
+    if f < 2:
         return 0
     
     yr = year / 1000.0
     grs = gross/10.0
 
 
-    if m > 0 or f > 0 or yr > 0 or grs > 0:
+    if m < 0 or f < 0 or yr < 0 or grs < 0:
         return -1
 
     
@@ -36,4 +32,4 @@ def pass_calc(malechar, femalechar, year, gross){
     else:
         return 0
 
-}
+
