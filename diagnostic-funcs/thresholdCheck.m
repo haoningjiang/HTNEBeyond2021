@@ -1,5 +1,7 @@
 function [f, num_wrong] = thresholdCheck(X, y, theta, threshold)
 
+%precision recall analysis based on threshold 
+
 mistakes = lrPredict(theta, X, threshold) - y;
 false_neg = -1 * sum(mistakes(mistakes == -1));
 false_pos = sum(mistakes(mistakes == 1));
