@@ -4,7 +4,7 @@ This machine-learning algorithm uses weights obtained from a logistic regression
 # Tech Used/Dependencies 
 - Backend/Frontend connection done with Flask API
 - Model trained by [Polygraph’s study of films by gender](https://github.com/matthewfdaniels/scripts) as well as [Bechdeltest.com's](https://bechdeltest.com/) database of movies that did and did not pass the Bechdel test.
-- Data fit to logistic regression model in Matlab
+- Data fit to logistic regression model in Matlab. Formulas learned in Professor Andrew Ng's Machine Learning course on Coursera.
 # Contributors 
 Haoning Jiang: Machine Learning (Matlab), Backend (Python)
 
